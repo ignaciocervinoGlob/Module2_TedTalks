@@ -16,6 +16,10 @@
 		B3F949D3266A728000D626BB /* Ted_TalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F949D2266A728000D626BB /* Ted_TalkTests.swift */; };
 		B3F949DE266A728000D626BB /* Ted_TalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F949DD266A728000D626BB /* Ted_TalkUITests.swift */; };
 		B3F949ED266A729400D626BB /* tedTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F949EC266A729400D626BB /* tedTalks.json */; };
+		E2D30DA5275120E4005DCA08 /* TED.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D30DA4275120E4005DCA08 /* TED.png */; };
+		E2D30DAC275121DB005DCA08 /* TedTalksView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D30DAB275121DB005DCA08 /* TedTalksView.storyboard */; };
+		E2D30DAE2751232D005DCA08 /* Tedtalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DAD2751232D005DCA08 /* Tedtalk.swift */; };
+		E2D30DB02751234D005DCA08 /* TedTalksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DAF2751234D005DCA08 /* TedTalksManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		B3F949DD266A728000D626BB /* Ted_TalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ted_TalkUITests.swift; sourceTree = "<group>"; };
 		B3F949DF266A728000D626BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F949EC266A729400D626BB /* tedTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tedTalks.json; sourceTree = "<group>"; };
+		E2D30DA4275120E4005DCA08 /* TED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TED.png; sourceTree = "<group>"; };
+		E2D30DAB275121DB005DCA08 /* TedTalksView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TedTalksView.storyboard; sourceTree = "<group>"; };
+		E2D30DAD2751232D005DCA08 /* Tedtalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tedtalk.swift; sourceTree = "<group>"; };
+		E2D30DAF2751234D005DCA08 /* TedTalksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TedTalksManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +109,15 @@
 		B3F949BA266A727C00D626BB /* Ted Talk */ = {
 			isa = PBXGroup;
 			children = (
+				E2D30DA92751214C005DCA08 /* Network */,
+				E2D30DA82751213A005DCA08 /* Presenter */,
+				E2D30DA727512132005DCA08 /* View */,
+				E2D30DA627512129005DCA08 /* Model */,
 				B3F949EB266A729400D626BB /* Assets */,
 				B3F949BB266A727C00D626BB /* AppDelegate.swift */,
 				B3F949BD266A727C00D626BB /* SceneDelegate.swift */,
 				B3F949BF266A727C00D626BB /* ViewController.swift */,
-				B3F949C1266A727C00D626BB /* Main.storyboard */,
 				B3F949C4266A728000D626BB /* Assets.xcassets */,
-				B3F949C6266A728000D626BB /* LaunchScreen.storyboard */,
 				B3F949C9266A728000D626BB /* Info.plist */,
 			);
 			path = "Ted Talk";
@@ -134,9 +144,51 @@
 		B3F949EB266A729400D626BB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E2D30DA4275120E4005DCA08 /* TED.png */,
 				B3F949EC266A729400D626BB /* tedTalks.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		E2D30DA627512129005DCA08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DAD2751232D005DCA08 /* Tedtalk.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2D30DA727512132005DCA08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DAB275121DB005DCA08 /* TedTalksView.storyboard */,
+				E2D30DAA275121A9005DCA08 /* Base */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2D30DA82751213A005DCA08 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E2D30DA92751214C005DCA08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DAF2751234D005DCA08 /* TedTalksManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E2D30DAA275121A9005DCA08 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B3F949C1266A727C00D626BB /* Main.storyboard */,
+				B3F949C6266A728000D626BB /* LaunchScreen.storyboard */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F949C8266A728000D626BB /* LaunchScreen.storyboard in Resources */,
+				E2D30DAC275121DB005DCA08 /* TedTalksView.storyboard in Resources */,
 				B3F949ED266A729400D626BB /* tedTalks.json in Resources */,
 				B3F949C5266A728000D626BB /* Assets.xcassets in Resources */,
 				B3F949C3266A727C00D626BB /* Main.storyboard in Resources */,
+				E2D30DA5275120E4005DCA08 /* TED.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F949C0266A727C00D626BB /* ViewController.swift in Sources */,
+				E2D30DB02751234D005DCA08 /* TedTalksManager.swift in Sources */,
+				E2D30DAE2751232D005DCA08 /* Tedtalk.swift in Sources */,
 				B3F949BC266A727C00D626BB /* AppDelegate.swift in Sources */,
 				B3F949BE266A727C00D626BB /* SceneDelegate.swift in Sources */,
 			);
