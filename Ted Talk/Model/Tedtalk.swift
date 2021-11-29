@@ -32,4 +32,9 @@ struct TedTalk: Decodable {
 		case publishedDate = "published_date"
 		case speakerOccupation = "speaker_occupation"
 	}
+
+	func getYearPublished() -> Int {
+		let teddate = NSDate(timeIntervalSince1970: self.publishedDate)
+		return Calendar.current.component(.year, from: teddate as Date)
+	}
 }

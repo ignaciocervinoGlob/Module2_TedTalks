@@ -13,10 +13,6 @@ enum Errors: Error {
 	case decodingProblem(String)
 }
 
-protocol TedTalksManagerProtocol {
-	func retrieve(onCompletion: @escaping (Result<[TedTalk], Errors>) -> Void)
-}
-
 class TedTalksManager: TedTalksManagerProtocol {
 	func retrieve(onCompletion: @escaping (Result<[TedTalk], Errors>) -> Void) {
 
